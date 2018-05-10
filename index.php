@@ -6,4 +6,8 @@
  * Time: 7:18
  */
 
-echo "hello world!";
+require_once 'core/CoreClass.php';
+
+$core = core\CoreClass::getInstance();
+$core->init();
+//echo "hello world!";
