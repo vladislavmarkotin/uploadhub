@@ -8,12 +8,14 @@
 
 namespace DB;
 
+require_once 'vendor/autoload.php';
 spl_autoload_register(function ($class) {
     $class = $class . '.php';
     require_once($class);
 });
 
 use core\AbstractCore as AC;
+use Illuminate\Database\Capsule\Manager as Capsule;
 
 class DBClass extends AC{
 
@@ -24,7 +26,19 @@ class DBClass extends AC{
     private function __clone(){}
 
     public function init(){
-        echo "DB! ";
+         $capsule = new Capsule;
+         $capsule->addConnection([
+         'driver' => DBDRIVER,
+         'host' => DBHOST,
+         'database' => DBNAME,
+         'username' => DBUSER,
+         'password' => DBPASS,
+         'charset' => 'utf8',
+         'collation' => 'utf8_unicode_ci',
+         'prefix' => '',
+        ]);
+        // Setup the Eloquent ORM…
+        $capsule->bootEloquent();
     }
 
     public function getInstance(){

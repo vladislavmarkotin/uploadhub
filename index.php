@@ -10,4 +10,3 @@ require_once 'core/CoreClass.php';
 
 $core = core\CoreClass::getInstance();
 $core->init();
-//echo "hello world!";

@@ -8,6 +8,8 @@
 
 namespace Template;
 
+require_once 'vendor/autoload.php';
+
 spl_autoload_register(function ($class) {
     $class = $class . '.php';
     require_once($class);
@@ -33,7 +35,10 @@ class TemplateClass extends AC{
     }
 
     public function init(){
-        echo "Template! ";
+        $loader = new \Twig_Loader_Filesystem('app/views/templates');
+        $twig = new \Twig_Environment($loader, array(
+            'cache' => 'app/views/cache',
+        ));
     }
 
 } 

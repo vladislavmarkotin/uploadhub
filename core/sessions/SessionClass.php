@@ -8,6 +8,8 @@
 
 namespace Sessions;
 
+session_start();
+
 spl_autoload_register(function ($class) {
     $class = $class . '.php';
     require_once($class);
