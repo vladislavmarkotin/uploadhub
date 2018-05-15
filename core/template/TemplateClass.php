@@ -11,15 +11,25 @@ namespace Template;
 require_once 'vendor/autoload.php';
 
 spl_autoload_register(function ($class) {
-    $class = $class . '.php';
-    require_once($class);
+     if( strpos($class, "Ex") ){
+        $class = "core/".str_replace('\\', '/', $class) . '.php';
+        require_once($class);
+    }
+    else{
+        $class = $class . '.php';
+        require_once($class);
+    }
+
 });
 
 use core\AbstractCore as AC;
+use exceptions\ExceptionClass as Ex;
 
 class TemplateClass extends AC{
 
     private static $template = null;
+    private $loader = null;
+    private $twig = null;
 
     private function __construct(){}
 
@@ -35,10 +45,17 @@ class TemplateClass extends AC{
     }
 
     public function init(){
-        $loader = new \Twig_Loader_Filesystem('app/views/templates');
-        $twig = new \Twig_Environment($loader, array(
+        $this->loader = new \Twig_Loader_Filesystem('app/views/templates');
+        $this->twig = new \Twig_Environment($this->loader, array(
             'cache' => 'app/views/cache',
+            'auto_reload' => true
         ));
+    }
+
+    public function getTwig(){
+        if ($this->twig)
+            return $this->twig;
+        else throw new Ex("Error with template");
     }
 
 } 

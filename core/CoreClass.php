@@ -29,6 +29,10 @@ spl_autoload_register(function ($class) {
         $class = "core/".str_replace('\\', '/', $class) . '.php';
         require_once($class);
     }
+    else if( strpos($class, "Ex") ){
+        $class = "core/".str_replace('\\', '/', $class) . '.php';
+        require_once($class);
+    }
 });
 
 use router\RouterClass as router;
@@ -36,6 +40,7 @@ use db\DBClass as DB;
 use cookies\CookiesClass as Cookie;
 use sessions\SessionClass as Session;
 use template\TemplateClass as Template;
+use exceptions\ExceptionClass as Ex;
 
 class CoreClass {
 
@@ -69,7 +74,15 @@ class CoreClass {
         }
     }
 
-    public function getSystemObject(Request $request){
+    public function getSystemObject(array $request){
+        switch ($request["type"]){
+            case "db": return $this->system_objects['db'];
+            case "router": return $this->system_objects['router'];
+            case "template": return $this->system_objects['template'];
+            case "sessions": return $this->system_objects['sessions'];
+            case "cookies": return $this->system_objects['cookies'];
+            default: throw new Ex("Can`t find such system object!");
 
+        }
     }
 } 

@@ -11,4 +11,7 @@ namespace Exceptions;
 
 class ExceptionClass extends \Exception{
 
+    public function __construct($with = null){
+        die("Error has happend: ".$with);
+    }
 } 

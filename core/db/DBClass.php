@@ -47,4 +47,8 @@ class DBClass extends AC{
         }
         else return self::$db_instance;
     }
+
+    public function Test(){
+        echo "Hi, this is DB object!";
+    }
 } 
