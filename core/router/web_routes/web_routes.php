@@ -27,7 +27,16 @@ class web_routes {
             'function' => 'index',
             'method' => 'get',
             'middleware' => 'anyone',
-            'view' => 'views/templates/index.html',
+            'view' => 'index.html',
+        ),
+        "404" => array (
+            'route' => '/',
+            'file' => 'core/exceptions/error404.php',
+            'class' => 'Error404',
+            'function' => 'Error',
+            'method' => 'get',
+            'middleware' => 'anyone',
+            'view' => '404.html',
         ),
     ];
 

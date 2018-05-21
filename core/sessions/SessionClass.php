@@ -35,6 +35,5 @@ class SessionClass extends AC{
     }
 
     public function init(){
-        echo "Sessions! ";
     }
 } 

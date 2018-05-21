@@ -41,10 +41,18 @@ class RouterClass extends AC{
 
     private function __clone(){}
 
+    //Велосипед на костылях
+    private function IsViewExist($param){
+        $param['view'] = "app/views/templates/".$param['view'];
+        if ( !file_exists($param['view']) ){
+            throw new Ex("Файл представлений не найден!");
+        }
+    }
+
     private function CheckFile($param){
         if (!file_exists($param['file'])){
-            echo $param['file'];
-            throw new Ex();
+            header("Location: 404");
+            //throw new Ex();
         }
         require_once $param['file'];
     }
@@ -54,7 +62,14 @@ class RouterClass extends AC{
             echo $param['class'];
             throw new Ex();
         }
-        return new $param['class'];
+        return new $param['class']($param['view']);
+    }
+
+    private function CheckMethod($object, $method){
+        if (!method_exists($object, $method)){
+            throw new Ex("with method: $method");
+        }
+        $object->$method();
     }
 
     public static function getInstance(){
@@ -72,9 +87,8 @@ class RouterClass extends AC{
     public function FindPath(){
         $this->file_info = web_routes::FindRoute($this->path);
         $this->CheckFile($this->file_info);
+        $this->IsViewExist($this->file_info);
         $obj = $this->CheckClass($this->file_info);
-        if (!$this->file_info){
-            //header("Location: core/exceptions/error404.php");
-        }
+        $this->CheckMethod($obj, $this->file_info["function"]);
     }
 } 

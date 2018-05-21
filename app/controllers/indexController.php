@@ -46,8 +46,8 @@ use exceptions\ExceptionClass as Ex;
 
 class indexController {
 
-    public function __construct(){
-
+    public function __construct($view){
+        
         $core = core\CoreClass::getInstance();
         $core->init();
 
@@ -56,6 +56,10 @@ class indexController {
         ));
 
         $twig = $template->getTwig();
-        echo $twig->render('index.html');
+        echo $twig->render($view);
+    }
+
+    public function index(){
+        echo "Index method!";
     }
 } 

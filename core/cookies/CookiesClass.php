@@ -33,7 +33,6 @@ class CookiesClass extends AC{
     }
 
     public function init(){
-        echo "Cookie! ";
     }
 
 } 
