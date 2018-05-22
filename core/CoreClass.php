@@ -63,10 +63,10 @@ class CoreClass {
 
         if (empty($this->system_objects)){
             $this->system_objects["router"] = router::getInstance();
+            $this->system_objects["session"] = Session::getInstance();
             $this->system_objects["db"] = DB::getInstance();
             $this->system_objects["template"] = Template::getInstance();
             $this->system_objects["cookies"] = Cookie::getInstance();
-            $this->system_objects["sessions"] = Session::getInstance();
         }
 
         foreach ($this->system_objects as $obj){
@@ -79,7 +79,7 @@ class CoreClass {
             case "db": return $this->system_objects['db'];
             case "router": return $this->system_objects['router'];
             case "template": return $this->system_objects['template'];
-            case "sessions": return $this->system_objects['sessions'];
+            case "session": return $this->system_objects['session'];
             case "cookies": return $this->system_objects['cookies'];
             default: throw new Ex("Can`t find such system object!");
 

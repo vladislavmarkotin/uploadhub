@@ -41,9 +41,8 @@ class RouterClass extends AC{
 
     private function __clone(){}
 
-    //Велосипед на костылях
     private function IsViewExist($param){
-        $param['view'] = "app/views/templates/".$param['view'];
+        $param['view'] = AC::PATH_TO_TEMPLATES.$param['view'];
         if ( !file_exists($param['view']) ){
             throw new Ex("Файл представлений не найден!");
         }
@@ -72,6 +71,12 @@ class RouterClass extends AC{
         $object->$method();
     }
 
+    private function CheckSession($param){
+        if ($param["middleware"] == "anyone"){
+            var_dump($_SESSION);
+        }
+    }
+
     public static function getInstance(){
         if ( !self::$instance ){
             return new RouterClass();
@@ -90,5 +95,6 @@ class RouterClass extends AC{
         $this->IsViewExist($this->file_info);
         $obj = $this->CheckClass($this->file_info);
         $this->CheckMethod($obj, $this->file_info["function"]);
+        $this->CheckSession($this->file_info);
     }
 } 

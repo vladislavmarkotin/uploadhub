@@ -12,4 +12,6 @@ namespace core;
 abstract class AbstractCore {
 
     abstract public function init();
+
+    const PATH_TO_TEMPLATES = "app/views/templates/";
 } 

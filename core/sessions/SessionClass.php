@@ -8,8 +8,6 @@
 
 namespace Sessions;
 
-session_start();
-
 spl_autoload_register(function ($class) {
     $class = $class . '.php';
     require_once($class);
@@ -35,5 +33,28 @@ class SessionClass extends AC{
     }
 
     public function init(){
+        session_start();
+    }
+
+    public function AddSession($user){
+        $_SESSION["user"] = $user;
+    }
+
+    public function DeleteSession(){
+        $_SESSION = array();
+
+        /*if(session_id() != "" || isset($_COOKIE[session_name()])){
+
+        }*/
+        session_destroy();
+    }
+
+    public function CheckSession(){
+        if (!empty($_SESSION)){
+
+        }
+        else{
+            echo "Sessions is empty!";
+        }
     }
 } 
