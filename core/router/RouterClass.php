@@ -17,6 +17,10 @@ spl_autoload_register(function ($class){
         /*$class = "core/router/".str_replace('\\', '/', $class) . '.php';
         require_once($class);*/
     }
+    elseif (strpos($class, "session")){
+        $class = "core/sessions/".str_replace('\\', '/', $class) . '.php';
+        require_once($class);
+    }
     else if( strpos($class, "Ex") ){
         $class = "core/".str_replace('\\', '/', $class) . '.php';
         require_once($class);
@@ -27,8 +31,10 @@ spl_autoload_register(function ($class){
 require_once 'core/router/web_routes/web_routes.php';
 
 use core\AbstractCore as AC;
+use core\CoreClass;
 use web_routes\web_routes;
 use exceptions\ExceptionClass as Ex;
+use Sessions\SessionClass as session;
 
 
 class RouterClass extends AC{
@@ -72,9 +78,26 @@ class RouterClass extends AC{
     }
 
     private function CheckSession($param){
-        if ($param["middleware"] == "anyone"){
-            var_dump($_SESSION);
+        if ($param["middleware"] == "user"){
+            $session = CoreClass::getInstance();
+            $session = $session->getSystemObject(array(
+                "type" => "session",
+            ));
+            $session->CheckSession();
         }
+    }
+
+    private function ChecMethodOfSendingData($param){
+        if( $param['method'] == "get" ){
+            $this->IsViewExist($this->file_info);
+            $obj = $this->CheckClass($this->file_info);
+            $this->CheckMethod($obj, $this->file_info["function"]);
+        }
+        else if($param['method'] == "post" ){
+            $obj = $this->CheckClass($this->file_info);
+            $this->CheckMethod($obj, $this->file_info["function"]);
+        }
+        else throw new Ex("Непонятный метод передачи данных!");
     }
 
     public static function getInstance(){
@@ -92,9 +115,8 @@ class RouterClass extends AC{
     public function FindPath(){
         $this->file_info = web_routes::FindRoute($this->path);
         $this->CheckFile($this->file_info);
-        $this->IsViewExist($this->file_info);
-        $obj = $this->CheckClass($this->file_info);
-        $this->CheckMethod($obj, $this->file_info["function"]);
         $this->CheckSession($this->file_info);
+        $this->ChecMethodOfSendingData($this->file_info);
+
     }
 } 

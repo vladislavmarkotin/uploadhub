@@ -38,6 +38,24 @@ class web_routes {
             'middleware' => 'anyone',
             'view' => '404.html',
         ),
+        "signup" => array(
+            'route' => 'signup',
+            'file' => 'app/controllers/SignupController.php',
+            'class' => 'SignupController',
+            'function' => 'Signup',
+            'method' => 'get',
+            'middleware' => 'anyone',
+            'view' => 'signup.html',
+        ),
+        "login" => array(
+            'route' => 'login',
+            'file' => 'app/controllers/LoginController.php',
+            'class' => 'LoginController',
+            'function' => 'Login',
+            'method' => 'get',
+            'middleware' => 'anyone',
+            'view' => 'login.html',
+        ),
     ];
 
     public static function FindRoute($route){

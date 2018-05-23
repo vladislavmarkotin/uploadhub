@@ -28,35 +28,10 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="272" max-vertical-offset="374">
-              <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+            <state vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="374">
+              <caret line="14" column="1" selection-start-line="12" selection-start-column="33" selection-end-line="14" selection-end-column="1" />
               <folding>
                 <element signature="e#6#85#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CoreClass.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/CoreClass.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.73077" vertical-offset="831" max-vertical-offset="1496">
-              <caret line="81" column="65" selection-start-line="81" selection-start-column="65" selection-end-line="81" selection-end-column="65" />
-              <folding>
-                <element signature="e#1000#1033#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="indexController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/indexController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.346153" vertical-offset="253" max-vertical-offset="918">
-              <caret line="62" column="29" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="29" />
-              <folding>
-                <element signature="e#1099#1132#0#PHP" expanded="true" />
-                <element signature="n#__construct#0;n#indexController#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -65,42 +40,77 @@
       <file leaf-file-name="RouterClass.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/router/RouterClass.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-40.53846" vertical-offset="0" max-vertical-offset="1190">
-              <caret line="97" column="46" selection-start-line="97" selection-start-column="46" selection-end-line="97" selection-end-column="46" />
+            <state vertical-scroll-proportion="-10.576923" vertical-offset="813" max-vertical-offset="1564">
+              <caret line="99" column="60" selection-start-line="99" selection-start-column="60" selection-end-line="99" selection-end-column="60" />
               <folding>
-                <element signature="e#607#635#0#PHP" expanded="true" />
-                <element signature="e#904#1124#0#PHP" expanded="false" />
-                <element signature="e#1130#1328#0#PHP" expanded="false" />
-                <element signature="e#1334#1546#0#PHP" expanded="false" />
-                <element signature="e#1552#1740#0#PHP" expanded="false" />
-                <element signature="e#1886#2047#0#PHP" expanded="false" />
-                <element signature="e#2053#2170#0#PHP" expanded="false" />
+                <element signature="e#758#786#0#PHP" expanded="true" />
+                <element signature="e#1113#1333#0#PHP" expanded="false" />
+                <element signature="e#1339#1537#0#PHP" expanded="false" />
+                <element signature="e#1543#1755#0#PHP" expanded="false" />
+                <element signature="e#1761#1949#0#PHP" expanded="false" />
+                <element signature="e#1955#2250#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SessionClass.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/core/sessions/SessionClass.php">
+      <file leaf-file-name="indexController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/indexController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7413534" vertical-offset="102" max-vertical-offset="833">
-              <caret line="51" column="33" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
+            <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="612">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="37" selection-end-column="3" />
               <folding>
-                <element signature="e#388#571#0#PHP" expanded="false" />
-                <element signature="e#577#631#0#PHP" expanded="false" />
-                <element signature="e#789#862#0#PHP" expanded="false" />
+                <element signature="e#109#1095#2#PHP" expanded="false" />
+                <element signature="e#1099#1132#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web_routes.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SignupController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/SignupController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="612">
+              <caret line="44" column="36" selection-start-line="8" selection-start-column="0" selection-end-line="44" selection-end-column="36" />
+              <folding>
+                <element signature="e#110#1096#2#PHP" expanded="false" />
+                <element signature="e#1100#1133#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web_routes.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/router/web_routes/web_routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.230769" vertical-offset="83" max-vertical-offset="748">
-              <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.92330825" vertical-offset="253" max-vertical-offset="1054">
+              <caret line="56" column="28" selection-start-line="56" selection-start-column="28" selection-end-line="56" selection-end-column="28" />
               <folding>
-                <element signature="e#984#1249#0#PHP" expanded="false" />
+                <element signature="e#1614#1879#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/templates/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="255">
+              <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/LoginController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="442">
+              <caret line="60" column="25" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
+              <folding>
+                <element signature="e#110#1096#2#PHP" expanded="false" />
+                <element signature="e#1100#1133#0#PHP" expanded="true" />
+                <element signature="n#__construct#0;n#LoginController#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -133,11 +143,15 @@
         <option value="$PROJECT_DIR$/app/controllers/indexController.php" />
         <option value="$PROJECT_DIR$/core/exceptions/error404.php" />
         <option value="$PROJECT_DIR$/app/views/templates/404.html" />
-        <option value="$PROJECT_DIR$/core/router/web_routes/web_routes.php" />
         <option value="$PROJECT_DIR$/core/AbstractCore.php" />
         <option value="$PROJECT_DIR$/core/CoreClass.php" />
-        <option value="$PROJECT_DIR$/core/router/RouterClass.php" />
         <option value="$PROJECT_DIR$/core/sessions/SessionClass.php" />
+        <option value="$PROJECT_DIR$/app/views/templates/signup.html" />
+        <option value="$PROJECT_DIR$/app/controllers/SignupController.php" />
+        <option value="$PROJECT_DIR$/core/router/RouterClass.php" />
+        <option value="$PROJECT_DIR$/app/controllers/LoginController.php" />
+        <option value="$PROJECT_DIR$/app/views/templates/login.html" />
+        <option value="$PROJECT_DIR$/core/router/web_routes/web_routes.php" />
       </list>
     </option>
   </component>
@@ -271,6 +285,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exceptions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="uploadhub.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="uploadhub.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -349,15 +381,15 @@
       <BehatRunner />
       <method />
     </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
       <tasks />
       <pass-parent-env-vars>false</pass-parent-env-vars>
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="0" />
@@ -391,13 +423,13 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -423,49 +455,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core/cookies/CookiesClass.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="663">
-          <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/template/TemplateClass.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="663">
-          <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/db/DBClass.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="612">
-          <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
-          <folding>
-            <element signature="e#468#895#0#PHP" expanded="false" />
-            <element signature="e#901#1055#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/router/RouterClass.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="612">
-          <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
-          <folding>
-            <element signature="e#607#635#0#PHP" expanded="true" />
-            <element signature="e#904#1124#0#PHP" expanded="false" />
-            <element signature="e#1130#1328#0#PHP" expanded="false" />
-            <element signature="e#1334#1546#0#PHP" expanded="false" />
-            <element signature="e#1552#1740#0#PHP" expanded="false" />
-            <element signature="e#1886#2047#0#PHP" expanded="false" />
-            <element signature="e#2053#2170#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
@@ -491,9 +480,9 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="646">
           <caret line="35" column="26" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
           <folding>
-            <element signature="e#388#571#0#PHP" expanded="false" />
-            <element signature="e#577#631#0#PHP" expanded="false" />
-            <element signature="e#789#862#0#PHP" expanded="false" />
+            <element signature="e#370#398#0#PHP" expanded="true" />
+            <element signature="e#984#1057#0#PHP" expanded="false" />
+            <element signature="e#1096#1257#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -530,13 +519,12 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="612">
           <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
           <folding>
-            <element signature="e#607#635#0#PHP" expanded="true" />
-            <element signature="e#904#1124#0#PHP" expanded="false" />
-            <element signature="e#1130#1328#0#PHP" expanded="false" />
-            <element signature="e#1334#1546#0#PHP" expanded="false" />
-            <element signature="e#1552#1740#0#PHP" expanded="false" />
-            <element signature="e#1886#2047#0#PHP" expanded="false" />
-            <element signature="e#2053#2170#0#PHP" expanded="false" />
+            <element signature="e#758#786#0#PHP" expanded="true" />
+            <element signature="e#1113#1333#0#PHP" expanded="false" />
+            <element signature="e#1339#1537#0#PHP" expanded="false" />
+            <element signature="e#1543#1755#0#PHP" expanded="false" />
+            <element signature="e#1761#1949#0#PHP" expanded="false" />
+            <element signature="e#1955#2250#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -566,9 +554,9 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="391">
           <caret line="15" column="28" selection-start-line="10" selection-start-column="0" selection-end-line="15" selection-end-column="28" />
           <folding>
-            <element signature="e#388#571#0#PHP" expanded="false" />
-            <element signature="e#577#631#0#PHP" expanded="false" />
-            <element signature="e#789#862#0#PHP" expanded="false" />
+            <element signature="e#370#398#0#PHP" expanded="true" />
+            <element signature="e#984#1057#0#PHP" expanded="false" />
+            <element signature="e#1096#1257#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -604,13 +592,12 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="289">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
-            <element signature="e#607#635#0#PHP" expanded="true" />
-            <element signature="e#904#1124#0#PHP" expanded="false" />
-            <element signature="e#1130#1328#0#PHP" expanded="false" />
-            <element signature="e#1334#1546#0#PHP" expanded="false" />
-            <element signature="e#1552#1740#0#PHP" expanded="false" />
-            <element signature="e#1886#2047#0#PHP" expanded="false" />
-            <element signature="e#2053#2170#0#PHP" expanded="false" />
+            <element signature="e#758#786#0#PHP" expanded="true" />
+            <element signature="e#1113#1333#0#PHP" expanded="false" />
+            <element signature="e#1339#1537#0#PHP" expanded="false" />
+            <element signature="e#1543#1755#0#PHP" expanded="false" />
+            <element signature="e#1761#1949#0#PHP" expanded="false" />
+            <element signature="e#1955#2250#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -637,13 +624,12 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="289">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
-            <element signature="e#607#635#0#PHP" expanded="true" />
-            <element signature="e#904#1124#0#PHP" expanded="false" />
-            <element signature="e#1130#1328#0#PHP" expanded="false" />
-            <element signature="e#1334#1546#0#PHP" expanded="false" />
-            <element signature="e#1552#1740#0#PHP" expanded="false" />
-            <element signature="e#1886#2047#0#PHP" expanded="false" />
-            <element signature="e#2053#2170#0#PHP" expanded="false" />
+            <element signature="e#758#786#0#PHP" expanded="true" />
+            <element signature="e#1113#1333#0#PHP" expanded="false" />
+            <element signature="e#1339#1537#0#PHP" expanded="false" />
+            <element signature="e#1543#1755#0#PHP" expanded="false" />
+            <element signature="e#1761#1949#0#PHP" expanded="false" />
+            <element signature="e#1955#2250#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -791,7 +777,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="289">
           <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -803,21 +788,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="374">
-          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
-          <folding>
-            <element signature="e#6#85#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/templates/404.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="255">
           <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -825,9 +799,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.63909775" vertical-offset="0" max-vertical-offset="665">
           <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-          <folding>
-            <element signature="e#6#85#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -847,47 +818,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/indexController.php">
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.346153" vertical-offset="253" max-vertical-offset="918">
-          <caret line="62" column="29" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="29" />
+        <state vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="374">
+          <caret line="14" column="1" selection-start-line="12" selection-start-column="33" selection-end-line="14" selection-end-column="1" />
           <folding>
-            <element signature="e#1099#1132#0#PHP" expanded="true" />
-            <element signature="n#__construct#0;n#indexController#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/router/web_routes/web_routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.230769" vertical-offset="83" max-vertical-offset="748">
-          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
-          <folding>
-            <element signature="e#984#1249#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/router/RouterClass.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-40.53846" vertical-offset="0" max-vertical-offset="1190">
-          <caret line="97" column="46" selection-start-line="97" selection-start-column="46" selection-end-line="97" selection-end-column="46" />
-          <folding>
-            <element signature="e#607#635#0#PHP" expanded="true" />
-            <element signature="e#904#1124#0#PHP" expanded="false" />
-            <element signature="e#1130#1328#0#PHP" expanded="false" />
-            <element signature="e#1334#1546#0#PHP" expanded="false" />
-            <element signature="e#1552#1740#0#PHP" expanded="false" />
-            <element signature="e#1886#2047#0#PHP" expanded="false" />
-            <element signature="e#2053#2170#0#PHP" expanded="false" />
+            <element signature="e#6#85#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/CoreClass.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.73077" vertical-offset="831" max-vertical-offset="1496">
-          <caret line="81" column="65" selection-start-line="81" selection-start-column="65" selection-end-line="81" selection-end-column="65" />
+        <state vertical-scroll-proportion="-18.961538" vertical-offset="0" max-vertical-offset="1496">
+          <caret line="34" column="5" selection-start-line="31" selection-start-column="4" selection-end-line="34" selection-end-column="5" />
           <folding>
             <element signature="e#1000#1033#0#PHP" expanded="true" />
           </folding>
@@ -896,12 +840,87 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/sessions/SessionClass.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7413534" vertical-offset="102" max-vertical-offset="833">
-          <caret line="51" column="33" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
+        <state vertical-scroll-proportion="-21.0" vertical-offset="321" max-vertical-offset="986">
+          <caret line="58" column="35" selection-start-line="58" selection-start-column="35" selection-end-line="58" selection-end-column="35" />
           <folding>
-            <element signature="e#388#571#0#PHP" expanded="false" />
-            <element signature="e#577#631#0#PHP" expanded="false" />
-            <element signature="e#789#862#0#PHP" expanded="false" />
+            <element signature="e#370#398#0#PHP" expanded="true" />
+            <element signature="e#984#1057#0#PHP" expanded="false" />
+            <element signature="e#1096#1257#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/indexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="612">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="37" selection-end-column="3" />
+          <folding>
+            <element signature="e#109#1095#2#PHP" expanded="false" />
+            <element signature="e#1099#1132#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/router/RouterClass.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.576923" vertical-offset="813" max-vertical-offset="1564">
+          <caret line="99" column="60" selection-start-line="99" selection-start-column="60" selection-end-line="99" selection-end-column="60" />
+          <folding>
+            <element signature="e#758#786#0#PHP" expanded="true" />
+            <element signature="e#1113#1333#0#PHP" expanded="false" />
+            <element signature="e#1339#1537#0#PHP" expanded="false" />
+            <element signature="e#1543#1755#0#PHP" expanded="false" />
+            <element signature="e#1761#1949#0#PHP" expanded="false" />
+            <element signature="e#1955#2250#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/SignupController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="612">
+          <caret line="44" column="36" selection-start-line="8" selection-start-column="0" selection-end-line="44" selection-end-column="36" />
+          <folding>
+            <element signature="e#110#1096#2#PHP" expanded="false" />
+            <element signature="e#1100#1133#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="442">
+          <caret line="60" column="25" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
+          <folding>
+            <element signature="e#110#1096#2#PHP" expanded="false" />
+            <element signature="e#1100#1133#0#PHP" expanded="true" />
+            <element signature="n#__construct#0;n#LoginController#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/templates/signup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23831776" vertical-offset="0" max-vertical-offset="642">
+          <caret line="9" column="7" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="255">
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/router/web_routes/web_routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.92330825" vertical-offset="253" max-vertical-offset="1054">
+          <caret line="56" column="28" selection-start-line="56" selection-start-column="28" selection-end-line="56" selection-end-column="28" />
+          <folding>
+            <element signature="e#1614#1879#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>

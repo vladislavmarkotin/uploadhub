@@ -9,11 +9,18 @@
 namespace Sessions;
 
 spl_autoload_register(function ($class) {
-    $class = $class . '.php';
-    require_once($class);
+    if( strpos($class, "Ex") ){
+        $class = "core/".str_replace('\\', '/', $class) . '.php';
+        require_once($class);
+    }
+    else{
+        $class = $class . '.php';
+        require_once($class);
+    }
 });
 
 use core\AbstractCore as AC;
+use exceptions\ExceptionClass as Ex;
 
 class SessionClass extends AC{
 
@@ -54,7 +61,7 @@ class SessionClass extends AC{
 
         }
         else{
-            echo "Sessions is empty!";
+            throw new Ex("You must log in or sign up!");
         }
     }
 } 
