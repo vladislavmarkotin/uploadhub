@@ -59,7 +59,7 @@ class LoginController {
     }
 
     public function Login(){
-        echo "Log in!!";
+
     }
 
 } 

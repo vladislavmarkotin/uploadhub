@@ -56,6 +56,19 @@ class web_routes {
             'middleware' => 'anyone',
             'view' => 'login.html',
         ),
+
+        /**
+         * Позже это нужно удалить!
+         */
+        "test" => array(
+            'route' => 'login',
+            'file' => 'app/models/TestModel.php',
+            'class' => 'TestModel',
+            'function' => 'test',
+            'method' => 'get',
+            'middleware' => 'anyone',
+            'view' => 'test.html',
+        ),
     ];
 
     public static function FindRoute($route){

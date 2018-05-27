@@ -16,17 +16,33 @@ spl_autoload_register(function ($class) {
 
 use core\AbstractCore as AC;
 use Illuminate\Database\Capsule\Manager as Capsule;
+use Illuminate\Database\Eloquent\Model as Model;
 
-class DBClass extends AC{
+class DBClass extends Model{
 
     private static $db_instance = null;
 
-    private function __construct(){}
+    public function __construct() {
+        $capsule = new Capsule();
+        $capsule->addConnection([
+            'driver' => DBDRIVER,
+            'host' => DBHOST,
+            'database' => DBNAME,
+            'username' => DBUSER,
+            'password' => DBPASS,
+            'charset' => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix' => '',
+        ]);
+        // Setup the Eloquent ORM…
+        $capsule->setAsGlobal();
+        $capsule->bootEloquent();
+    }
 
     private function __clone(){}
 
     public function init(){
-         $capsule = new Capsule;
+         $capsule = new Capsule();
          $capsule->addConnection([
          'driver' => DBDRIVER,
          'host' => DBHOST,
@@ -38,10 +54,11 @@ class DBClass extends AC{
          'prefix' => '',
         ]);
         // Setup the Eloquent ORM…
+        $capsule->setAsGlobal();
         $capsule->bootEloquent();
     }
 
-    public function getInstance(){
+    public static function getInstance(){
         if (!self::$db_instance){
             return new DBClass();
         }
