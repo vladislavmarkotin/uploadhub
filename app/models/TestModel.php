@@ -18,13 +18,13 @@ use \Illuminate\Database\Eloquent\Model;
 class TestModel extends Model{
 
     protected $table = 'users';
-    protected $fillable = ['username','email','pass'];
+    protected $fillable = ['username','email','password'];
 
     public function __construct(){
 
     }
 
     public function test(){
-        TestModel::create(['username'=>"Vlad",'email'=>"vlad@test.com",'password'=>"123456"]);
+        TestModel::create(['username'=> "Vlad",'email'=>"vlad@test.com",'password'=>"123456"]);
     }
 } 

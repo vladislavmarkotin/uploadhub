@@ -28,6 +28,11 @@ class __TwigTemplate_7e3117ebf81b87f00a36f373908fb7f42d8457fc15fc0f37b4ee934eef1
 </head>
 <body>
     <h1>Hello, please sign up to have an access to the project!</h1>
+<form method=\"post\" action=\"sign\" name=\"sign\">
+    <input type=\"text\" name=\"login\">
+    <input type=\"text\" name=\"test\">
+    <button type=\"submit\">Зарегистрироваться</button>
+</form>
 </body>
 </html>";
     }

@@ -69,6 +69,14 @@ class web_routes {
             'middleware' => 'anyone',
             'view' => 'test.html',
         ),
+        "sign" => array(
+            'name' => 'sign',
+            'file' => 'app/controllers/SignupController.php',
+            'class' => 'SignupController',
+            'function' => 'SignPost',
+            'method' => 'post',
+            'middleware' => 'anyone',
+        ),
     ];
 
     public static function FindRoute($route){

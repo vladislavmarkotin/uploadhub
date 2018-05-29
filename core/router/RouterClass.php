@@ -17,6 +17,10 @@ spl_autoload_register(function ($class){
         /*$class = "core/router/".str_replace('\\', '/', $class) . '.php';
         require_once($class);*/
     }
+    elseif ( strpos($class, "Request" )){
+        $class = str_replace('\\', '/', $class) . '.php';
+        require_once($class);
+    }
     elseif (strpos($class, "session")){
         $class = "core/sessions/".str_replace('\\', '/', $class) . '.php';
         require_once($class);
@@ -30,11 +34,14 @@ spl_autoload_register(function ($class){
 
 require_once 'core/router/web_routes/web_routes.php';
 
+use app\controllers\Request\RequestClass;
 use core\AbstractCore as AC;
 use core\CoreClass;
 use web_routes\web_routes;
 use exceptions\ExceptionClass as Ex;
+use exceptions\EmptyPostException as EmptyEx;
 use Sessions\SessionClass as session;
+//use RequestClass as Request;
 
 
 class RouterClass extends AC{
@@ -67,14 +74,16 @@ class RouterClass extends AC{
             echo $param['class'];
             throw new Ex();
         }
+        if (!$param['view'])
+            return new $param['class']();
         return new $param['class']($param['view']);
     }
 
-    private function CheckMethod($object, $method){
+    private function CheckMethod($object, $method, $params = null){
         if (!method_exists($object, $method)){
             throw new Ex("with method: $method");
         }
-        $object->$method();
+        $object->$method($params);
     }
 
     private function CheckSession($param){
@@ -94,8 +103,14 @@ class RouterClass extends AC{
             $this->CheckMethod($obj, $this->file_info["function"]);
         }
         else if($param['method'] == "post" ){
-            $obj = $this->CheckClass($this->file_info);
-            $this->CheckMethod($obj, $this->file_info["function"]);
+            if ($_POST){
+                $obj = $this->CheckClass($this->file_info);
+                $request = new RequestClass();
+                $request->setData($_POST);
+                $this->CheckMethod($obj, $this->file_info["function"], $request->getData());
+            }
+            else throw new EmptyEx();
+
         }
         else throw new Ex("Непонятный метод передачи данных!");
     }
