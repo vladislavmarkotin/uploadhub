@@ -35,8 +35,12 @@ spl_autoload_register(function ($class) {
         $class = "core/".str_replace('\\', '/', $class) . '.php';
         require_once($class);
     }
-    else if (strpos($class, "Manager")){
-        $class = "app/controllers/Abstract_factory_for_validator".str_replace('\\', '/', $class) . '.php';
+    elseif ( strpos($class, "Request" )){
+        $class = str_replace('\\', '/', $class) . '.php';
+        require_once($class);
+    }
+    elseif ( strpos($class, "Validator" )){
+        $class = "app/controllers/".str_replace('\\', '/', $class) . '.php';
         require_once($class);
     }
 });
@@ -46,6 +50,8 @@ use db\DBClass as DB;
 use cookies\CookiesClass as Cookie;
 use sessions\SessionClass as Session;
 use exceptions\ExceptionClass as Ex;
+use \app\controllers\Request\RequestClass as Request;
+use \app\controllers\validator\ValidatorClass as Validator;
 
 class SignupController {
 
@@ -68,9 +74,29 @@ class SignupController {
         echo "Sign up!";
     }
 
-    public function SignPost($params){
-        echo "hi";
-        var_dump($params);
+    public function SignPost(Request $params){
+
+        $validator = Validator::getInstance();
+
+        $settings = [
+            'login' => [
+                'type' => "email",
+                "pattern" => ""
+            ],
+            "test" => [
+                'type' => "string",
+                'pattern' => ""
+            ]
+        ];
+
+        $validator->CreateFactory($settings, $params);
+
+        $args = array(
+            'login' => FILTER_VALIDATE_EMAIL,
+            'test' => FILTER_VALIDATE_BOOLEAN
+        );
+
+        //var_dump(filter_input_array(INPUT_POST, $args));
     }
 
 } 

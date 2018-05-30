@@ -107,7 +107,7 @@ class RouterClass extends AC{
                 $obj = $this->CheckClass($this->file_info);
                 $request = new RequestClass();
                 $request->setData($_POST);
-                $this->CheckMethod($obj, $this->file_info["function"], $request->getData());
+                $this->CheckMethod($obj, $this->file_info["function"], $request);
             }
             else throw new EmptyEx();
 
