@@ -28,6 +28,7 @@ class __TwigTemplate_5b29f56e901421b1b0509239f28ff8e9b43c54bf4b91c2c5220a2417b26
 </head>
 <body>
     <h1>Hello!</h1>
+    <h2>Index page</h2>
 </body>
 </html>";
     }

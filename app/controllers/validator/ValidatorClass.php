@@ -22,6 +22,10 @@ spl_autoload_register(function ($class) {
         $class = "app/controllers/".str_replace('\\', '/', $class) . '.php';
         require_once($class);
     }
+    elseif( strpos($class, "Email" ) ){
+        $class = "app/controllers/".str_replace('\\', '/', $class) . '.php';
+        require_once($class);
+    }
 });
 
 use app\controllers\validator\EmailValidator as EmailValidator;
@@ -46,7 +50,15 @@ class ValidatorClass {
     {
         /*
          * Тут нужна фабрика,которая бы определяла тип валидатора*/
-        print_r($params->getData());
-        new EmailValidator($settings['login'], $params);
+        foreach ($settings as $s){
+
+            switch ($s['type']){
+                case "email": new EmailValidator($settings['login'], $params);
+                    break;
+                case "string": new TextValidator($settings['test'], $params);
+                    break;
+            }
+        }
+        //
     }
 } 

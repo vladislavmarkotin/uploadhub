@@ -47,7 +47,7 @@ use exceptions\ExceptionClass as Ex;
 class indexController {
 
     public function __construct($view){
-        
+
         $core = core\CoreClass::getInstance();
         $core->init();
 
@@ -56,6 +56,7 @@ class indexController {
         ));
 
         $twig = $template->getTwig();
+        //var_dump($twig);
         echo $twig->render($view);
     }
 

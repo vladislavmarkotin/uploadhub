@@ -76,6 +76,7 @@ class web_routes {
             'function' => 'SignPost',
             'method' => 'post',
             'middleware' => 'anyone',
+            'redirect' => '/',
         ),
     ];
 

@@ -15,10 +15,10 @@ spl_autoload_register(function ($class) {
         $class = "core/".str_replace('\\', '/', $class) . '.php';
         require_once($class);
     }
-    else{
+    /*else{
         $class = $class . '.php';
         require_once($class);
-    }
+    }*/
 
 });
 

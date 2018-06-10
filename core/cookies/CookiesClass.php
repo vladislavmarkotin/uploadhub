@@ -8,10 +8,11 @@
 
 namespace Cookies;
 
-spl_autoload_register(function ($class) {
+/*spl_autoload_register(function ($class) {
     $class = $class . '.php';
     require_once($class);
-});
+});*/
+require_once "core/cookies/CookiesClass.php";
 
 use core\AbstractCore as AC;
 

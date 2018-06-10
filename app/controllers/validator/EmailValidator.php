@@ -26,7 +26,12 @@ class EmailValidator {
 
     private $email = null;
 
+    private function CheckMail($email){
+
+    }
+
     public function __construct(array $settings, Request $param){
-        print_r($param->getElement('login'));
+        //print_r($param->getElement('login'));
+        //print_r($param->getElement('test'));
     }
 } 

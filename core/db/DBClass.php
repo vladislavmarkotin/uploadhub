@@ -9,12 +9,13 @@
 namespace DB;
 
 require_once 'vendor/autoload.php';
-spl_autoload_register(function ($class) {
+/*spl_autoload_register(function ($class) {
     $class = $class . '.php';
     require_once($class);
-});
+});*/
 
-use core\AbstractCore as AC;
+require_once "core/db/Config.php";
+
 use Illuminate\Database\Capsule\Manager as Capsule;
 use Illuminate\Database\Eloquent\Model as Model;
 

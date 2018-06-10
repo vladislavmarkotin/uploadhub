@@ -5,7 +5,6 @@
  * Date: 23.05.2018
  * Time: 13:53
  */
-
 spl_autoload_register(function ($class) {
     if (strpos($class, "Router")){
         $class = "core/".str_replace('\\', '/', $class) . '.php';
@@ -43,7 +42,14 @@ spl_autoload_register(function ($class) {
         $class = "app/controllers/".str_replace('\\', '/', $class) . '.php';
         require_once($class);
     }
+    else if ( strpos($class, "Model" ) ){
+        $class = "app/models/".str_replace('\\', '/', $class) . '.php';
+        //require_once($class);
+        die($class);
+    }
 });
+
+require_once "app/models/Models/UserModel.php";
 
 use router\RouterClass as router;
 use db\DBClass as DB;
@@ -52,8 +58,14 @@ use sessions\SessionClass as Session;
 use exceptions\ExceptionClass as Ex;
 use \app\controllers\Request\RequestClass as Request;
 use \app\controllers\validator\ValidatorClass as Validator;
+use Models\UserModel;
 
 class SignupController {
+
+    private static function create_user($username, $email, $password){
+        $user = Models\UserModel::create(['username'=>$username,'email'=>$email,'password'=>$password]);
+        return $user;
+    }
 
     public function __construct($view = null){
         if ($view){
@@ -74,27 +86,32 @@ class SignupController {
         echo "Sign up!";
     }
 
-    public function SignPost(Request $params){
+    public function SignPost(Request $params, $redirect = null){
 
-        $validator = Validator::getInstance();
+        //var_dump($params->getElement('login'));
+        $login = $params->getElement('login');
+        $test = $params->getElement('test');
+        /*$validator = Validator::getInstance();
 
         $settings = [
             'login' => [
                 'type' => "email",
-                "pattern" => ""
             ],
             "test" => [
                 'type' => "string",
-                'pattern' => ""
+                'pattern' => "r;min:5;max:20"
             ]
         ];
 
-        $validator->CreateFactory($settings, $params);
+        $validator->CreateFactory($settings, $params);*/
 
         $args = array(
             'login' => FILTER_VALIDATE_EMAIL,
             'test' => FILTER_VALIDATE_BOOLEAN
         );
+
+        self::create_user($test, $login, $test);
+        header("Location: $redirect");
 
         //var_dump(filter_input_array(INPUT_POST, $args));
     }

@@ -79,11 +79,11 @@ class RouterClass extends AC{
         return new $param['class']($param['view']);
     }
 
-    private function CheckMethod($object, $method, $params = null){
+    private function CheckMethod($object, $method, $params = null, $redirect = null ){
         if (!method_exists($object, $method)){
             throw new Ex("with method: $method");
         }
-        $object->$method($params);
+        $object->$method($params, $redirect);
     }
 
     private function CheckSession($param){
@@ -107,7 +107,7 @@ class RouterClass extends AC{
                 $obj = $this->CheckClass($this->file_info);
                 $request = new RequestClass();
                 $request->setData($_POST);
-                $this->CheckMethod($obj, $this->file_info["function"], $request);
+                $this->CheckMethod($obj, $this->file_info["function"], $request, $param['redirect']);
             }
             else throw new EmptyEx();
 
