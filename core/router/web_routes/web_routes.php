@@ -78,6 +78,15 @@ class web_routes {
             'middleware' => 'anyone',
             'redirect' => '/',
         ),
+        "log" =>array(
+            "name" => 'log',
+            'file' => 'app/controllers/LoginController.php',
+            'class' => 'LoginController',
+            'function' => 'LoginPost',
+            'method' => 'post',
+            'middleware' => 'anyone',
+            'redirect' => '/',
+        ),
     ];
 
     public static function FindRoute($route){

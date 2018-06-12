@@ -35,7 +35,17 @@ spl_autoload_register(function ($class) {
         $class = "core/".str_replace('\\', '/', $class) . '.php';
         require_once($class);
     }
+    elseif ( strpos($class, "Request" )){
+        $class = str_replace('\\', '/', $class) . '.php';
+        require_once($class);
+    }
+    elseif ( strpos($class, "Models" ) ){
+        $class = "app/models/".str_replace('\\', '/', $class) . '.php';
+        require_once($class);
+    }
 });
+
+require_once "app/models/Models/UserModel.php";
 
 use router\RouterClass as router;
 use db\DBClass as DB;
@@ -43,23 +53,43 @@ use cookies\CookiesClass as Cookie;
 use sessions\SessionClass as Session;
 use template\TemplateClass as Template;
 use exceptions\ExceptionClass as Ex;
+use \app\controllers\Request\RequestClass as Request;
+use Models\UserModel as UM;
 
 class LoginController {
 
-    public function __construct($view){
-        $core = core\CoreClass::getInstance();
-        $core->init();
+    private static function getUser($email, $password){
+        $user = UM::all()->where("email", $email)->where("password", $password)->toArray();
+        //print_r($user);
+        return $user;
+    }
 
-        $template = $core->getSystemObject(array(
-            "type" => "template"
-        ));
+    public function __construct($view = null){
+        if($view){
+            $core = core\CoreClass::getInstance();
+            $core->init();
 
-        $twig = $template->getTwig();
-        echo $twig->render($view);
+            $template = $core->getSystemObject(array(
+                "type" => "template"
+            ));
+
+            $twig = $template->getTwig();
+            echo $twig->render($view);
+        }
+
     }
 
     public function Login(){
 
+    }
+
+    public function LoginPost(Request $params, $redirect = null){
+
+        $login = $params->getElement('login');
+        $password = $params->getElement('pass');
+
+        self::getUser($login, $password);
+        header("Location: $redirect");
     }
 
 } 
