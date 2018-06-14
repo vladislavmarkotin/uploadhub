@@ -8,6 +8,8 @@
 
 namespace Sessions;
 
+session_start();
+
 spl_autoload_register(function ($class) {
     if( strpos($class, "Ex") ){
         $class = "core/".str_replace('\\', '/', $class) . '.php';
@@ -40,7 +42,7 @@ class SessionClass extends AC{
     }
 
     public function init(){
-        session_start();
+
     }
 
     public function AddSession($user){
@@ -48,17 +50,19 @@ class SessionClass extends AC{
     }
 
     public function DeleteSession(){
-        $_SESSION = array();
 
-        /*if(session_id() != "" || isset($_COOKIE[session_name()])){
+        var_dump($_SESSION);
+        if(session_id() != "" || isset($_COOKIE[session_name()])){
+            $_SESSION = array();
+            session_destroy();
+            echo "Destroy session!";
+        }
 
-        }*/
-        session_destroy();
     }
 
     public function CheckSession(){
         if (!empty($_SESSION)){
-
+            return 1;
         }
         else{
             throw new Ex("You must log in or sign up!");

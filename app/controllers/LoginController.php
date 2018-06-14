@@ -46,6 +46,7 @@ spl_autoload_register(function ($class) {
 });
 
 require_once "app/models/Models/UserModel.php";
+//require_once 'core/CoreClass.php';
 
 use router\RouterClass as router;
 use db\DBClass as DB;
@@ -88,7 +89,31 @@ class LoginController {
         $login = $params->getElement('login');
         $password = $params->getElement('pass');
 
-        self::getUser($login, $password);
+        $data = self::getUser($login, $password);
+        //var_dump($data[1]['id']);
+
+        if ( $data ){
+
+          /*
+          * Получили ядро проекта
+          * Получили системный объект сессий
+          */
+            $core = core\CoreClass::getInstance();
+            $session = $core->getSystemObject(array(
+                "type" => "session"
+            ));
+
+
+            /*
+             * Здесь надо начинать сессию
+             * И мне необходимо послать запрос к $system_objects
+             * чтобы получить экземпляр класса сессии
+             */
+            $session->AddSession($data[1]['id']);
+        }
+
+
+
         header("Location: $redirect");
     }
 

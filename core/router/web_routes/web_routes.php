@@ -44,7 +44,7 @@ class web_routes {
             'class' => 'SignupController',
             'function' => 'Signup',
             'method' => 'get',
-            'middleware' => 'anyone',
+            'middleware' => 'guest',
             'view' => 'signup.html',
         ),
         "login" => array(
@@ -53,7 +53,7 @@ class web_routes {
             'class' => 'LoginController',
             'function' => 'Login',
             'method' => 'get',
-            'middleware' => 'anyone',
+            'middleware' => 'guest',
             'view' => 'login.html',
         ),
 

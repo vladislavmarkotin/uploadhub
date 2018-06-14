@@ -62,5 +62,9 @@ class indexController {
 
     public function index(){
         echo "Index method!";
+        /*if ($_SESSION){
+            echo "PAM PAM";
+        }*/
+
     }
 } 

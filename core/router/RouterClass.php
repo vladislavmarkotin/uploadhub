@@ -87,12 +87,16 @@ class RouterClass extends AC{
     }
 
     private function CheckSession($param){
+        $session = CoreClass::getInstance();
+        $session = $session->getSystemObject(array(
+            "type" => "session",
+        ));
         if ($param["middleware"] == "user"){
-            $session = CoreClass::getInstance();
-            $session = $session->getSystemObject(array(
-                "type" => "session",
-            ));
+
             $session->CheckSession();
+        }
+        elseif( $param["middleware"] == "guest" ){
+            $session->DeleteSession();
         }
     }
 
